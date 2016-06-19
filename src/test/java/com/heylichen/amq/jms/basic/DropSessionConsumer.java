@@ -1,23 +1,27 @@
-package com.heylichen.amq.jms.commons;
+package com.heylichen.amq.jms.basic;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.jms.*;
 
 /**
  * Created by lc on 2016/6/10.
  */
-public class TopicProducer {
-  private static final Logger logger = LoggerFactory.getLogger(TopicProducer.class);
+public class DropSessionConsumer {
   private Connection connection = null;
-  private Session session = null;
   private MessageProducer producer = null;
   private String connectorUrI;
+  private MessageConsumer consumer = null;
   private String topic;
+  private boolean durable;
+  private MessageListener listener;
 
-  public TopicProducer(String connectorUrI, String topic) {
+  public DropSessionConsumer(String connectorUrI, String topic, boolean durable, MessageListener listener) {
+    this.connectorUrI = connectorUrI;
+    this.topic = topic;
+    this.durable = durable;
+    this.listener = listener;
+
     this.connectorUrI = connectorUrI;
     this.topic = topic;
     try {
@@ -26,23 +30,28 @@ public class TopicProducer {
 
       // Create a Connection
       connection = connectionFactory.createConnection();
+      connection.setClientID( "TopicProducerClient");
       connection.start();
 
       // Create a Session
-      session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+      Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
       // Create the destination (Topic or Queue)
       Topic destination = session.createTopic(topic);
 
       // Create a MessageProducer from the Session to the Topic or Queue
-      producer = session.createProducer(destination);
-      producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
+      if (durable) {
+        consumer = session.createDurableSubscriber(destination, topic + ".Durable.Consumer");
+      } else {
+        consumer = session.createConsumer(destination);
+      }
+      consumer.setMessageListener(listener);
     } catch (Exception e) {
       e.printStackTrace();
     }
   }
 
-  public void close() {
+  public void close(){
     if (connection != null) {
       try {
         connection.close();
@@ -50,11 +59,5 @@ public class TopicProducer {
         e.printStackTrace();
       }
     }
-  }
-
-  public void sendMsg(String textMsg) throws JMSException {
-    Message message = session.createTextMessage(textMsg);
-    producer.send(message);
-//logger.error("sendMsg error, msg:{}, stack:{}", new Object[]{textMsg, Throwables.getStackTraceAsString(e)});
   }
 }
