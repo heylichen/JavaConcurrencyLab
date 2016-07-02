@@ -17,6 +17,12 @@
         <camel-version>2.17.1</camel-version>
     </properties>
     <dependencies>
+        <!--Solr-->
+        <dependency>
+            <groupId>org.apache.solr</groupId>
+            <artifactId>solr-solrj</artifactId>
+            <version>6.1.0</version>
+        </dependency> 
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>

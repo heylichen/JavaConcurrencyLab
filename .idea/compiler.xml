@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="amq" />
+        <module name="SolrLab" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="amq" target="1.8" />
+      <module name="SolrLab" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

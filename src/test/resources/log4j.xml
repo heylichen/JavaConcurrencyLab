@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.heylichen.amq">
+	<logger name="com.heylichen.solr">
 		<level value="info" />
 	</logger>
 	
