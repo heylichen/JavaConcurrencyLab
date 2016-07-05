@@ -34,7 +34,7 @@ public class TweetMsg {
   @Field
   @JSONField(name="text")
   private String text;
-
+  /**/
   public Integer getId() {
     return id;
   }
