@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class PostTweetTest {
   private Logger logger = LoggerFactory.getLogger(PostTweetTest.class);
-  private int BATCH = 100;
+  private int BATCH = 1;
 
   @Test
   public void batchPost() {
@@ -31,7 +31,7 @@ public class PostTweetTest {
       e.printStackTrace();
     }
 
-    batchPost(BATCH, 1 + BATCH);
+   // batchPost(BATCH, 1 + BATCH);
   }
 
   @Test
@@ -68,18 +68,19 @@ public class PostTweetTest {
     try {
       for (int i = 0; i < batch; i++) {
         TweetMsg msg = new TweetMsg();
-        msg.setFavorites(10);
+        msg.setFavoritesCount(10);
         msg.setLang("eng");
         msg.setScreenName("张三2");
-        msg.setText("Today is a good day!");
+        msg.setText("#Yummm :) Drinking a latte at Caffé Grecco in SF's historic North Beach...\n" +
+            "Learning text analysis with #SolrInAction by @ManningBooks on my i-Pad");
         msg.setTimestamp(new Date());
-        msg.setUserId("1");
+      /*  msg.setUserId("1");*/
         msg.setType("post");
         msg.setId(startId + i);
         solrClient.addBean(msg);
       }
 
-      // solrClient.commit();
+       solrClient.commit();
     } catch (SolrServerException | IOException e) {
       e.printStackTrace();
     }

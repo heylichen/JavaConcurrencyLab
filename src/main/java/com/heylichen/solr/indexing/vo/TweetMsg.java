@@ -25,12 +25,12 @@ public class TweetMsg {
   @Field
   @JSONField(name="lang")
   private String lang;
-  @Field("user_id")
+  /*@Field("user_id")
   @JSONField(name="user_id")
-  private String userId;
-  @Field
-  @JSONField(name="favorites")
-  private Integer favorites;
+  private String userId;*/
+  @Field("favorites_count")
+  @JSONField(name="favourites_count")
+  private Integer favoritesCount;
   @Field
   @JSONField(name="text")
   private String text;
@@ -75,20 +75,20 @@ public class TweetMsg {
     this.lang = lang;
   }
 
-  public String getUserId() {
+/*  public String getUserId() {
     return userId;
   }
 
   public void setUserId(String userId) {
     this.userId = userId;
+  }*/
+
+  public Integer getFavoritesCount() {
+    return favoritesCount;
   }
 
-  public Integer getFavorites() {
-    return favorites;
-  }
-
-  public void setFavorites(Integer favorites) {
-    this.favorites = favorites;
+  public void setFavoritesCount(Integer favoritesCount) {
+    this.favoritesCount = favoritesCount;
   }
 
   public String getText() {
