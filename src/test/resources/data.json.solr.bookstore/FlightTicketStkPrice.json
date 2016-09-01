@@ -1,0 +1,43 @@
+{
+  "id": "1/2016-08-20/0",
+  "resId_s": "1",
+  "departDate_tdt": "2016-09-01T00:00:00Z",
+  "roundId_i": 122,
+  "purchaseType_i": 1,
+  "bookingDateline_tdt": "2016-08-31T00:00:00Z",
+  "childCost_f": 80,
+  "childPrice_f": 90,
+  "adultCost_f": 100,
+  "adultPrice_f": 200,
+  "leftCount_i": 10,
+  "status_i": 0,
+  "departAirportCode_ss": [
+    "NJ102",
+    "BJ203"
+  ],
+  "destAirportCode_ss": [
+    "SY202",
+    "NY303"
+  ],
+  "airportCodeName_ss": [
+    "NJ102|南京路口机场",
+    "BJ203|北京首都机场"
+  ],
+  "destInDepartDay_ti": [
+    103,
+    205
+  ],
+  "departTime_tis": [
+    10990,
+    20860
+  ],
+  "departTime_i": 10990,
+  "destTime_tis": [
+    11050,
+    21160
+  ],
+  "elapsedTime_tis": [
+    10060,
+    20300
+  ]
+}

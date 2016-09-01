@@ -1,0 +1,76 @@
+{
+  "id": 23456,
+  "resCode_s": "NJ1002",
+  "ticketName_s": "南京到三亚 5日 往返",
+  "ticketType_i": 1,
+  "advanceBookDay_i": 5,
+  "isChange_i": 1,
+  "changeLimitDescription_s": "随便退",
+  "remark_s": "备注",
+  "ownerId": 5122,
+  "ownerName_s": "张三",
+  "managerId_i": 121212,
+  "managerName_s": "李四",
+  "custRemark_s": "客户备注",
+  "bookNotice_s": "预定须知",
+  "dayNum_ti": 3,
+  "nightNum_ti": 2,
+  "minBookingNum_ti": 1,
+  "delFlag_ti": 0,
+  "airlineCompanyCode_ss": [
+    "h1",
+    "h2",
+    "h3"
+  ],
+  "airlineCompany_ss": [
+    "h1|南方航空",
+    "h2|东方航空",
+    "h3|首都航空"
+  ],
+  "journeyInterval_ti": 3,
+  "journeyIntervals_ss": [
+    "1|1",
+    "2|3",
+    "3|1"
+  ],
+  "airlineCompanyJourney_ss": [
+    "h1|1",
+    "h2|2",
+    "h3|3"
+  ],
+  "departCityCode_ss": [
+    "102|1",
+    "103|2"
+  ],
+  "destCityCode_ss": [
+    "202|1",
+    "203|3"
+  ],
+  "cityCodeName_ss": [
+    "102|南京",
+    "103|北京",
+    "202|东京",
+    "203|纽约"
+  ],
+  "cabinType_ss": [
+    "A|1",
+    "B|1",
+    "C|2"
+  ],
+  "stopType_ss": [
+    "f0|1",
+    "f1|2",
+    "f2|3"
+  ],
+  "stopType_s": "0",
+  "transitType_ss": [
+    "f0|1",
+    "f1|2",
+    "f2|3"
+  ],
+  "transitType_s": "0",
+  "flightId_ss": [
+    "NJ120",
+    "TN202"
+  ]
+}

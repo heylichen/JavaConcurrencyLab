@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "hello world",
+    "author": "zhangsan",
+    "description": "this is apache  "
+  },
+  {
+    "id": 2,
+    "title": "hello world1",
+    "author": "zhangsan1",
+    "description": "this is apache solr 1"
+  },
+  {
+    "id": 3,
+    "title": "solr in action",
+    "author": "zhangsan",
+    "description": "this is apache "
+  },
+  {
+    "id": 4,
+    "title": "apache books",
+    "author": "zhangsan",
+    "description": "this is apache solr in action"
+  },
+  {
+    "id": 5,
+    "title": "apache books",
+    "author": "zhangsan",
+    "description": "includes improved smart partial escaping in the case of syntax errors; fielded queries, +/-, and phrase queries are still supported in this mode."
+  },
+  {
+    "id": 6,
+    "title": "apache books",
+    "author": "zhangsan",
+    "description": "this is apache solr in an action"
+  }
+]

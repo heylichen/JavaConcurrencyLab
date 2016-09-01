@@ -1,0 +1,19 @@
+{
+  "id": 1212,
+  "flightNo_s": "NJ102",
+  "departureCityCode_i": 1602,
+  "destinationCityCode_i": 906,
+  "flightDate_tdt": [
+    "2016-08-01",
+    "2016-08-02"
+  ],
+  "arriveDay_i": 0,
+  "isIndeterminedFlight_i": 0,
+  "departAirportCode_i": 202,
+  "arriveAirportCode_i": 302,
+  "departTerminalName_s": "南京A航站楼",
+  "arriveTerminalName_s": "三亚B航站楼",
+  "delFlag_i": 0,
+  "departTime_s": "10:20",
+  "arriveTime_s": "20:03"
+}

@@ -1,0 +1,19 @@
+{
+  "id": 1212,
+  "airlineId_i": 1122,
+  "airlineName_s": "东方航空",
+  "flightNo_s": "DF1022",
+  "departureCityCode_s": "1602",
+  "destinationCityCode_s": "906",
+  "isStopOver_i": 0,
+  "stopOverCity_s": "镇江",
+  "stopOverTime_s": "01:10",
+  "delFlag_i": 0,
+  "isIndeterminedFlight_i": 0,
+  "departureCityTimeZone_i": 8,
+  "destinationCityTimeZone_i": 8,
+  "ticketIds_ss": [
+    "12",
+    "23"
+  ]
+}
