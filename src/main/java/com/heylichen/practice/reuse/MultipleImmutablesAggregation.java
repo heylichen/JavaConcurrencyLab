@@ -84,6 +84,7 @@ public class MultipleImmutablesAggregation {
 
     /**
      * code reuse version
+     *
      * @param productByVendorList
      * @param productByVendorListB
      * @return
@@ -104,6 +105,7 @@ public class MultipleImmutablesAggregation {
 
     /**
      * this will create a new CollectedPrice in each itration
+     *
      * @param totalPrice
      * @param totalCost
      * @param priceByVendor
@@ -128,13 +130,14 @@ public class MultipleImmutablesAggregation {
 
     /**
      * avoiding unnecessary object creation
+     *
      * @param total
      * @param priceByVendor
      * @param costByVendor
      */
     private static void doCalculate(CollectedPrice total, Float priceByVendor, Float costByVendor) {
       if (priceByVendor != null) {
-        total.setTotalPrice(total.getTotalPrice()+priceByVendor);
+        total.setTotalPrice(total.getTotalPrice() + priceByVendor);
       }
       if (costByVendor != null) {
         total.setTotalCost(total.getTotalCost() + costByVendor);
@@ -142,6 +145,4 @@ public class MultipleImmutablesAggregation {
     }
 
   }
-
-
 }
