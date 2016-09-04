@@ -14,6 +14,7 @@ public class NonReentrantDemo {
 
 
   private static class Factorial {
+    //this is a nonreentrant mutex implemented by Doug Lea
     private Mutex mutex = new Mutex();
 
 
@@ -61,9 +62,11 @@ public class NonReentrantDemo {
     int param = 5;
     FactorialWithReentrantLock fac1 = new FactorialWithReentrantLock();
     int value = fac1.calculate(param);
+    //this should print
     System.out.println("fac("+param+")="+value);
 
     Factorial fac = new Factorial();
+    //this will cause deadlock
     int value1 = fac.calculate(param);
     System.out.println("fac("+param+")="+value1);
   }
