@@ -1,4 +1,4 @@
-package com.heylichen.concurrentcy.liveness.reentrancy;
+package com.heylichen.concurrency.liveness.reentrancy;
 
 import EDU.oswego.cs.dl.util.concurrent.Mutex;
 
