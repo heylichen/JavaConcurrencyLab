@@ -61,7 +61,7 @@ public class NonReentrantDemo {
   public static void main(String[] args) {
     int param = 5;
     FactorialWithReentrantLock fac1 = new FactorialWithReentrantLock();
-    //this will not cause deadlock, because the lock held is reentrant
+    //this will not cause deadlock, because the lock held is reentrant.
     int value = fac1.calculate(param);
     //this should print
     System.out.println("fac("+param+")="+value);
