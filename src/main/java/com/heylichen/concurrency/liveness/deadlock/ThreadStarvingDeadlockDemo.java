@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.*;
 
 /**
- * Created by lc on 2016/9/5.
+ * Created by Chen Li on 2016/9/5.
  * <p>
  * 1. Another form of resource-based deadlock is thread-starvation deadlock. We saw
  * an example of this hazard in Section 8.1.1, where a task that submits a task and
@@ -32,6 +32,7 @@ public class ThreadStarvingDeadlockDemo {
 	private static int testCase = 1;
 
 	public static void main(String[] args) throws Exception {
+		//change parameter to NUM-1 will trigger starving.
 		starvingOrNot(NUM);
 		//starving();
 	}
