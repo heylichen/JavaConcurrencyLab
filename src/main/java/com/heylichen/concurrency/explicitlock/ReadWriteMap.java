@@ -35,4 +35,13 @@ public class ReadWriteMap<K, V> {
   }
 
 // Do the same for other read-only Map methods
+
+  public V putIfAbsent(K key, V value) {
+    w.lock();
+    try {
+      return map.putIfAbsent(key, value);
+    } finally {
+      w.unlock();
+    }
+  }
 }
